@@ -10,7 +10,7 @@ body {
   margin: 0;
 }
 
-.chatbot {
+.bot {
     bottom: 0;
     right : 0;
     position: fixed;

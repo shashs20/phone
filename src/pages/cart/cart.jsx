@@ -14,7 +14,7 @@ export const Cart = () => {
   return (
     <div className="cart">
       <div>
-        <h1>Your Cart Items</h1>
+        <h1>Cart Items</h1>
       </div>
       <div className="cart">
         {PRODUCTS.map((product) => {
@@ -31,7 +31,7 @@ export const Cart = () => {
           <button onClick={() => navigate("/checkout")}> Checkout </button>
         </div>
       ) : (
-        <h1> Your Shopping Cart is Empty</h1>
+        <h1> Shopping Cart is Empty</h1>
       )}
     </div>
   );

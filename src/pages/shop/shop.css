@@ -1,10 +1,5 @@
-.shopTitle {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 40px;
-}
 .products {
-  width: 90%;
+  width: 80%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -28,11 +23,6 @@
 
 .product .description {
   text-align: center;
-}
-
-.product:hover {
-  transition: 0.3s ease-in;
-  cursor: pointer;
 }
 
 .addToCartBttn {

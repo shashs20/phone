@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./checkout.css";
 
 export const Checkout = () => {
-    const [details, setDetails] = useState({
+    const [] = useState({
         name: "",
         email: "",
         street: "",

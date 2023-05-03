@@ -7,43 +7,42 @@ import "./App.css";
 
 const steps = [
   {
-      id: '0',
-      message: 'Hi, welcome to StarMobile!',
-
-      // This calls the next id
-      // i.e. id 1 in this case
-      trigger: '1',
-  }, {
-      id: '1',
-
-      // This message appears in
-      // the bot chat bubble
-      message: 'Please write your username',
-      trigger: '2'
-  }, {
-      id: '2',
-
-      // Here we want the user
-      // to enter input
-      user: true,
-      trigger: '3',
-  }, {
-      id: '3',
-      message: " hi {previousValue}, how can I help you?",
-      trigger: 4
-  }, {
-      id: '4',
-      options: [
-           
-          // When we need to show a number of
-          // options to choose we create alist
-          // like this
-          { value: 1, label: 'View Courses' },
-          { value: 2, label: 'Read Articles' },
-
-      ],
-      end: true
-  }
+    id: 'Hello',
+    message: 'Hello, welcome to StarMobile!',
+    trigger: 'Ask Name',
+  }, 
+  {
+    id: 'Ask Name',
+    message: 'What is your name?',
+    trigger: 'Wait'
+  }, 
+  {
+    id: 'Wait',
+    user: true,
+    trigger: 'Name'
+  }, 
+  {
+    id: 'Name',
+    message: " hi {previousValue}, which brand do you want to buy?",
+    trigger: 'brands'
+  },
+  {
+    id:'brands',
+    options: [
+      { value: 'Apple', label: 'Apple', trigger: 'Apple' },
+      { value: 'Samsung', label: 'Samsung', trigger: 'Samsung' }, 
+    ]
+  },
+  {
+    id:'Apple',
+    message:'There are 4 options',
+    end: true
+  },
+  {
+    id:'Samsung',
+    message:'There are 3 options',
+    end: true
+  },
 ];
 
 // Creating our own theme
@@ -60,12 +59,9 @@ const theme = {
 
 function index() {
   return (
-      <div className="chatbot">
+      <div className="index">
           <ThemeProvider theme={theme}>
-              <ChatBot
-                  headerTitle="MobileBot"
-                  steps={steps}
-              />
+              <ChatBot steps={steps} />
           </ThemeProvider>
       </div>
   );
@@ -75,7 +71,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
   <App />
-  <div>
+  <div className="bot">
     <ChatBot steps={steps} />
   </div>
 </React.StrictMode>,
