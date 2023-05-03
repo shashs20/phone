@@ -35,14 +35,55 @@ const steps = [
   },
   {
     id:'Apple',
-    message:'There are 4 options',
+    message:'Screen Size?',
+    trigger: 'size'
+  },
+  {
+    id:'size',
+    options: [
+      { value: '6.1 inches', label: '6.1 inches', trigger: '6.1 inches' },
+      { value: '6.7 inches', label: '6.7 inches', trigger: '6.7 inches' },
+    ]
+  },
+  {
+    id:'6.1 inches',
+    message:'Choice between iPhone 14 and iPhone 14 Pro',
+    end: true
+  },
+  {
+    id:'6.7 inches',
+    message:'Choice between iPhone 14 Plus and iPhone 14 Pro Max',
     end: true
   },
   {
     id:'Samsung',
-    message:'There are 3 options',
+    message:'Screen Size?',
+    trigger: 'screen'
+  },
+  {
+    id:'screen',
+    options: [
+      { value: '6.1 inches', label: '6.1 inches', trigger: '6.1 inches' },
+      { value: '6.6 inches', label: '6.6 inches', trigger: '6.6 inches' },
+      { value: '6.8 inches', label: '6.8 inches', trigger: '6.8 inches' },
+    ]
+  },
+  {
+    id:'6.1 inches',
+    message:'Samsung Galaxy S23 has the smallest screen size',
     end: true
   },
+  {
+    id:'6.6 inches',
+    message:'Samsung Galaxy S23+ has the second biggest screen size',
+    end: true
+  },
+  {
+    id:'6.8 inches',
+    message:'Samsung Galaxy S23+ Ultra has the biggest screen size',
+    end: true
+  },
+
 ];
 
 // Creating our own theme
@@ -77,3 +118,5 @@ root.render(
 </React.StrictMode>,
 
 );
+
+export default index;

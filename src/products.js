@@ -47,7 +47,7 @@ export const PRODUCTS = [
     productName: "Samsung Galaxy S23+",
     price: 1049.0,
     productImage: product6,
-    productDescription: "The Samsung Galaxy S23+ is the bigger sibling of the regular Galaxy S23 with it’s 6.6-inch Dynamic AMOLED display with 120Hz refresh rate. Specs also include Qualcomm Snapdragon 8 Gen 2 processor, 4700mAh battery and Triple camera setup on the back.",
+    productDescription: "The Samsung Galaxy S23+ is the bigger sibling of the regular Galaxy S23 with it's 6.6-inch Dynamic AMOLED display with 120Hz refresh rate. Specs also include Qualcomm Snapdragon 8 Gen 2 processor, 4700mAh battery and Triple camera setup on the back.",
   },
   {
     id: 7,
