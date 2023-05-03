@@ -1,0 +1,29 @@
+.form {
+    justify-content: center;
+    text-align: center;
+}
+
+input[type=text], select {
+    width: 20%;
+    padding: 4px 20px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.pay button {
+    margin: 0;
+    position: absolute;
+    top: 92%;
+    right: 45%;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+}
